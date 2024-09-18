@@ -1,1 +1,6 @@
 project/db-data
+mail-service/mailerApp
+logger-service/loggerServiceApp
+listener-service/listenerApp
+broker-service/brokerApp
+authentication-service/authApp
