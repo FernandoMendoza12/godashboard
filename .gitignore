@@ -4,3 +4,5 @@ logger-service/loggerServiceApp
 listener-service/listenerApp
 broker-service/brokerApp
 authentication-service/authApp
+front-end/fronEndApp
+front-end/frontApp.exe

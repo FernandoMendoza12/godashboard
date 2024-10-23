@@ -1,10 +1,11 @@
 SHELL=cmd.exe
-FRONT_END_BINARY=frontApp.exe
+FRONT_END_BINARY=frontApp.exez
 BROKER_BINARY=brokerApp
 AUTH_BINARY=authApp
 LOGGER_BINARY=loggerServiceApp
 MAIL_BINARY=mailerApp
 LISTENER_BINARY=listenerApp
+FRONT_BINARY=frontEndApp
 
 ## up: starts all containers in the background without forcing build
 up:
@@ -25,6 +26,12 @@ down:
 	@echo Stopping docker compose...
 	docker-compose down
 	@echo Done!
+
+## build_front_linux: builds the front binary as a linux executable
+build_front_linux:
+	@echo Building front binary...
+	chdir ..\front-end && set GOOS=linux&& set GOARCH=amd64&& set CGO_ENABLED=0 && go build -o ${FRONT_BINARY} ./cmd/web
+	@echo Done
 
 ## build_broker: builds the broker binary as a linux executable
 build_broker:
