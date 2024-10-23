@@ -10,7 +10,7 @@ services:
       replicas: 1
   
   listener-service:
-    image: loafs/listeners-service:1.0.0
+    image: loafs/listener-service:1.0.0
     deploy:
       mode: replicated
       replicas: 1
