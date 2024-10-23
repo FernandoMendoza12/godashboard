@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: broker-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: broker-service
+  template:
+    metadata:
+      labels:
+        app: broker-service
+    spec:
+      containers:
+      - name: broker-service
